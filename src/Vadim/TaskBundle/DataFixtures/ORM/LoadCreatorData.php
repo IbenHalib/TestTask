@@ -7,7 +7,6 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Vadim\TaskBundle\Entity\Creator;
 use Symfony\Component\Yaml\Yaml;
-use Vadim\TaskBundle\Form\Type\SiteType;
 
 class LoadCreatorData extends AbstractFixture implements OrderedFixtureInterface
 {

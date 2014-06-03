@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Vadim\TaskBundle\EntityRepository\CreatorRepository")
  * @ORM\Table(name="creator")
  */
 class Creator

@@ -15,7 +15,6 @@ class CreatorController extends Controller
     public function newAction(Request $request)
     {
         $form = $this->createForm(new CreatorType());
-//        $form->handleRequest($request);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
