@@ -125,8 +125,8 @@ class Creator
     }
 
     /**
-     * @return Creator
      * @param \DateTime $birthDate
+     * @return Creator
      */
     public function setBirthDate($birthDate)
     {
@@ -136,8 +136,8 @@ class Creator
     }
 
     /**
-     * @return Creator
      * @param string $contactData
+     * @return Creator
      */
     public function setContactData($contactData)
     {
@@ -147,8 +147,8 @@ class Creator
     }
 
     /**
-     * @return Creator
      * @param \DateTime $dateStartCareer
+     * @return Creator
      */
     public function setDateStartCareer($dateStartCareer)
     {
@@ -158,8 +158,8 @@ class Creator
     }
 
     /**
-     * @return Creator
      * @param integer $id
+     * @return Creator
      */
     public function setId($id)
     {
@@ -169,8 +169,8 @@ class Creator
     }
 
     /**
-     * @return Creator
      * @param string $name
+     * @return Creator
      */
     public function setName($name)
     {
@@ -180,8 +180,8 @@ class Creator
     }
 
     /**
-     * @return Creator
      * @param Project $projects
+     * @return Creator
      */
     public function setProjects($projects)
     {
@@ -191,8 +191,8 @@ class Creator
     }
 
     /**
-     * @return Creator
      * @param string $usedTechnology
+     * @return Creator
      */
     public function setUsedTechnology($usedTechnology)
     {
