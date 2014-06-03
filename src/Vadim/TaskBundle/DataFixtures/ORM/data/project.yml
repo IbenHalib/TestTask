@@ -1,0 +1,32 @@
+-
+    name: "Project1"
+    clientName: "Client1"
+    dateStart: "11-11-2012"
+    referenceCategory: "Category1"
+    referenceCreator:
+       0: "Creator1"
+       1: "Creator2"
+-
+    name: "Project2"
+    clientName: "Client2"
+    dateStart: "13-05-2013"
+    referenceCategory: "Category1"
+    referenceCreator:
+       0: "Creator2"
+-
+    name: "Project3"
+    clientName: "Client3"
+    dateStart: "07-10-2014"
+    referenceCategory: "Category3"
+    referenceCreator:
+       0: "Creator1"
+       1: "Creator2"
+       2: "Creator3"
+-
+    name: "Project4"
+    clientName: "Client4"
+    dateStart: "10-03-2014"
+    referenceCategory: "Category2"
+    referenceCreator:
+       0: "Creator2"
+       1: "Creator3"

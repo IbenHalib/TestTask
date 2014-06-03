@@ -1,0 +1,21 @@
+-
+    name: "Creator1"
+    contactData: "email Creator1@test.ua"
+    birthDate: "30-11-1992"
+    startCareer: "30-11-2013"
+    usedTechnology: "Technology1"
+    reference: "Creator1"
+-
+    name: "Creator2"
+    contactData: "email Creator2@test.ua"
+    birthDate: "01-10-1993"
+    startCareer: "01-05-2014"
+    usedTechnology: "Technology1"
+    reference: "Creator2"
+-
+    name: "Creator3"
+    contactData: "email Creator3@test.ua"
+    birthDate: "11-11-1991"
+    startCareer: "01-09-2010"
+    usedTechnology: "Technology3"
+    reference: "Creator3"

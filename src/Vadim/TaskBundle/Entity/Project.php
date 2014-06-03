@@ -39,7 +39,7 @@ class Project
 
     /**
      * @var Project
-     * @ORM\JoinColumn(name="project_id", nullable=false)
+     * @ORM\JoinColumn(name="category_id", nullable=false)
      * @ORM\ManyToOne(targetEntity="Category", inversedBy="projects")
      */
     protected $category;
@@ -103,7 +103,7 @@ class Project
     }
 
     /**
-     * @param Category $category
+     * @param mixed $category
      * @return Project
      */
     public function setCategory($category)
