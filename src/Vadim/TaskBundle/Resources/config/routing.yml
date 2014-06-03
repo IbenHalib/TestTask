@@ -1,3 +1,11 @@
 vadim_task_new:
         pattern: /creator/new
         defaults: {_controller: VadimTaskBundle:Creator:new}
+
+vadim_task_category:
+        resource: "@VadimTaskBundle/Resources/config/routing/category.yml"
+        prefix:   /category
+
+vadim_task_project:
+        resource: "@VadimTaskBundle/Resources/config/routing/project.yml"
+        prefix:   /project
