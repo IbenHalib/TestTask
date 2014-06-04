@@ -9,3 +9,7 @@ vadim_task_category:
 vadim_task_project:
         resource: "@VadimTaskBundle/Resources/config/routing/project.yml"
         prefix:   /project
+
+tree_generate_tree:
+         pattern:  /tree
+         defaults: { _controller: "VadimTaskBundle:Tree:generate" }

@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Vadim\TaskBundle\EntityRepository\CategoryRepository")
  * @ORM\Table(name="category")
  */
 class Category

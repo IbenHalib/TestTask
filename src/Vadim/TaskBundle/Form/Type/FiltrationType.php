@@ -11,11 +11,24 @@ class FiltrationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('filtrationData', 'date', [
+        $builder
+            ->add('filtrationData', 'date', [
                     'constraints' => [
                        new NotBlank(),
                     ],
-                  ])->add('submit', 'submit')
+                  ])
+            ->add('filtrationType', 'choice', [
+                'choices'   => [
+                    'Before'   => 'Before',
+                    'After' => 'After',
+                    'Equal'   => 'Equal',
+                ],
+                'preferred_choices' => ['Before'],
+                'constraints' => [
+                    new NotBlank(),
+                ],
+            ])
+            ->add('submit', 'submit')
         ;
 
     }

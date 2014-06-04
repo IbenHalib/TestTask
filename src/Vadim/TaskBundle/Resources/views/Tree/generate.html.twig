@@ -1,0 +1,25 @@
+{% extends 'VadimTaskBundle::layout.html.twig' %}
+
+{% block content %}
+    <ul>
+    {% for category in categories %}
+        <li>
+            <a href="{{ path('category_show', { 'id': category.id }) }}">{{ category.name }}</a>
+        </li>
+        <ul>
+        {% for project in category.projects %}
+            <li>
+                <a href="{{ path('project_show', { 'id': project.id }) }}">{{ project.name }}</a>
+            </li>
+            <ul>
+            {% for creator in project.creators %}
+                <li>
+                    <a href="{{ path('creator_show', { 'id': creator.id }) }}">{{ creator.name }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+    </ul>
+{% endblock content %}

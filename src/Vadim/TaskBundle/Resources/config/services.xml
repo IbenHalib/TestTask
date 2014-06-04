@@ -7,6 +7,9 @@
     <parameters>
         <parameter key="vadim_task.creator_entity_repository.class">Vadim\TaskBundle\EntityRepository\CreatorRepository</parameter>
         <parameter key="entity">Vadim\TaskBundle\Entity\Creator</parameter>
+        <parameter key="vadim_task.generate_tree.class">Vadim\TaskBundle\Model\GenerateTree</parameter>
+        <parameter key="entity_category">Vadim\TaskBundle\Entity\Category</parameter>
+        <parameter key="vadim_task.category_entity_repository.class">Vadim\TaskBundle\EntityRepository\CategoryRepository</parameter>
     </parameters>
 
     <services>
@@ -16,5 +19,22 @@
                  factory-method="getRepository">
            <argument>%entity%</argument>
         </service>
+
+        <service id="vadim_task.category_entity_repository"
+                 class="%vadim_task.category_entity_repository.class%"
+                 factory-service="doctrine.orm.entity_manager"
+                 factory-method="getRepository">
+            <argument>%entity_category%</argument>
+        </service>
+
+        <service id="vadim_task.generate_tree"
+                class="%vadim_task.generate_tree.class%">
+            <argument type="service" id="vadim_task.category_entity_repository"/>
+        </service>
+
+        <!--<service id="vadim_task.generate_tree"-->
+                 <!--class="%vadim_task.generate_tree.class%">-->
+            <!--<argument type="service" id="doctrine.orm.entity_manager"/>-->
+        <!--</service>-->
     </services>
 </container>

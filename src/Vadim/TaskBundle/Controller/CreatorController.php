@@ -60,8 +60,10 @@ class CreatorController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+
             $creatorRepository = $this->get('vadim_task.creator_entity_repository');
-            $creators = $creatorRepository->findByBeforeDateStartCareerQuery((new \DateTime('01-05-2014')));
+            $query = $this->getQuery($form->getData()['filtrationType']);
+            $creators = $creatorRepository->$query($form->getData()['filtrationData']);
 
             return $this->render('VadimTaskBundle:Creator:index.html.twig', array(
                 'creators' => $creators,
@@ -69,7 +71,13 @@ class CreatorController extends Controller
         }
 
         return $this->render('VadimTaskBundle:Creator:filtration.html.twig', ['form' => $form->createView()]);
-
     }
+
+    protected function getQuery($type)
+    {
+
+        return 'findBy'.$type.'DateStartCareerQuery';
+    }
+
 
 }
