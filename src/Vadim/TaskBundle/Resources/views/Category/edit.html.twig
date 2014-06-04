@@ -1,6 +1,7 @@
 {% extends 'VadimTaskBundle::layout.html.twig' %}
 
-{% block content %}
+{% block body %}
+<div class="container">
     <h1>Category edit</h1>
 
     {{ form(edit_form) }}
@@ -12,5 +13,6 @@
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>
-</ul>
-{% endblock content%}
+         </ul>
+ </div>
+{% endblock body%}

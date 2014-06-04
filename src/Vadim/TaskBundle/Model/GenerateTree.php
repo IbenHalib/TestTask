@@ -3,7 +3,6 @@
 namespace Vadim\TaskBundle\Model;
 
 use Doctrine\ORM\EntityRepository;
-use Vadim\TaskBundle\EntityRepository\CreatorRepository;
 
 class GenerateTree
 {

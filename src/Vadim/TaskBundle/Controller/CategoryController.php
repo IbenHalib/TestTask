@@ -4,9 +4,8 @@ namespace Vadim\TaskBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use Vadim\TaskBundle\Entity\Category;
-use Vadim\TaskBundle\Form\CategoryType;
+use Vadim\TaskBundle\Form\Type\CategoryType;
 
 /**
  * Category controller.

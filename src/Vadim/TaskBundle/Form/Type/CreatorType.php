@@ -22,7 +22,8 @@ class CreatorType extends AbstractType
             ->add('usedTechnology','text')
             ->add('projects', 'entity', [
                 'class' => 'Vadim\TaskBundle\Entity\Project',
-                'property' => 'name'
+                'property' => 'name',
+                'multiple'  => true,
             ])
         ;
     }

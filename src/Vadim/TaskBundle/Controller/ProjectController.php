@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Vadim\TaskBundle\Entity\Project;
-use Vadim\TaskBundle\Form\ProjectType;
+use Vadim\TaskBundle\Form\Type\ProjectType;
 
 /**
  * Project controller.
