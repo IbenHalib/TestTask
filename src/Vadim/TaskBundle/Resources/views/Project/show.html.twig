@@ -1,6 +1,6 @@
-{% extends '::base.html.twig' %}
+{% extends 'VadimTaskBundle::layout.html.twig' %}
 
-{% block body -%}
+{% block content %}
     <h1>Project</h1>
 
     <table class="record_properties">
@@ -37,4 +37,4 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
-{% endblock %}
+{% endblock content %}

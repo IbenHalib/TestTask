@@ -1,0 +1,15 @@
+creator_new:
+    pattern: /new
+    defaults: {_controller: VadimTaskBundle:Creator:new}
+
+creator_index:
+    pattern: /
+    defaults: {_controller: VadimTaskBundle:Creator:index}
+
+creator_show:
+    pattern:  /show/{id}
+    defaults: { _controller: "VadimTaskBundle:Creator:show" }
+
+creator_filtration:
+    pattern:  /filtration
+    defaults: { _controller: "VadimTaskBundle:Creator:filtration"}

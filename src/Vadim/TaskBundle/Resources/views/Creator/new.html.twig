@@ -1,7 +1,10 @@
-{% extends '::base.html.twig' %}
-{% block body %}
-    <form action="{{ path('vadim_task_new') }}" method="post" {{ form_enctype(form) }}>
+{% extends 'VadimTaskBundle::layout.html.twig' %}
+{% block content%}
+    <h1>Creator creation</h1>
+
+    <form action="{{ path('creator_new') }}" method="post" {{ form_enctype(form) }}>
         {{ form_widget(form) }}
         <input type="submit" />
     </form>
-{% endblock body %}
+
+{% endblock content %}

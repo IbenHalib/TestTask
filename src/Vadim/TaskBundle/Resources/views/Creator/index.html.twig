@@ -1,0 +1,40 @@
+{% extends 'VadimTaskBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class ="posts">
+        <div class="container posts-container">
+            <h1>Creators list</h1>
+            <ul class="nav">
+                <li>
+                    <a href="{{ path('creator_new') }}"> {{ 'Add New Creator' }} </a>
+                </li>
+            </ul>
+        {% for creator in creators %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="pull-left">
+                        <a href="{{ path('creator_show', { 'id': creator.id }) }}">{{ creator.name }}</a>
+                    </div>
+                    <br>
+                    <div class="panel-body">
+                        <p><b>Birth Date</b> {{ creator.birthDate|date('Y-m-d') }}</p>
+                        <p><b>dateStartCareer</b> {{ creator.dateStartCareer|date('Y-m-d') }}</p>
+                        <p><b>Contact Data:</b> {{ creator.contactData }}</p>
+                        <p><b>Used Technology:</b> {{ creator.usedTechnology }}</p>
+                        <p><b>Projects:</b>
+                        {% for project in creator.projects %}
+                          <a href="{{ path('project_show', { 'id': project.id }) }}">{{ project.name }}</a>
+                        {% endfor %}
+                        </p>
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li>
+                        <a href="{{ path('creator_show', {'id': creator.id}) }}"> {{ 'show' }} </a>
+                    </li>
+                </ul>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+    {% endblock content %}

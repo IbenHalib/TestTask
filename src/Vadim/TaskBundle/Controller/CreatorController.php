@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Vadim\TaskBundle\Entity\Creator;
+use Vadim\TaskBundle\Form\Type\FiltrationType;
 use Vadim\TaskBundle\Form\Type\CreatorType;
 
 class CreatorController extends Controller
@@ -27,6 +28,48 @@ class CreatorController extends Controller
         }
 
         return $this->render('VadimTaskBundle:Creator:new.html.twig', ['form' => $form->createView()]);
+    }
+
+    public function indexAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $creators = $em->getRepository('VadimTaskBundle:Creator')->findAll();
+
+        return $this->render('VadimTaskBundle:Creator:index.html.twig', array(
+            'creators' => $creators,
+        ));
+    }
+
+    public function showAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $creator = $em->getRepository('VadimTaskBundle:Creator')->find($id);
+
+        if (!$creator) {
+            throw $this->createNotFoundException('Unable to find Category entity.');
+        }
+
+        return $this->render('VadimTaskBundle:Creator:show.html.twig', array(
+            'creator'      => $creator,
+        ));
+    }
+
+    public function filtrationAction(Request $request)
+    {
+        $form = $this->createForm(new FiltrationType());
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $creatorRepository = $this->get('vadim_task.creator_entity_repository');
+            $creators = $creatorRepository->findByBeforeDateStartCareerQuery((new \DateTime('01-05-2014')));
+
+            return $this->render('VadimTaskBundle:Creator:index.html.twig', array(
+                'creators' => $creators,
+            ));
+        }
+
+        return $this->render('VadimTaskBundle:Creator:filtration.html.twig', ['form' => $form->createView()]);
+
     }
 
 }

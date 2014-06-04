@@ -6,7 +6,7 @@ use Doctrine\ORM\EntityRepository;
 
 class CreatorRepository extends EntityRepository
 {
-    public function findByDateStartCareerQuery($dateStartCareer)
+    public function findByEqualDateStartCareerQuery($dateStartCareer)
     {
         return $this
             ->createQueryBuilder('Creator')
