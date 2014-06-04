@@ -11,7 +11,9 @@ class TreeController extends Controller
     {
         $rep = $this->get('vadim_task.generate_tree');
         $categories = $rep->getTree();
-        $em = $this->getDoctrine()->getManager();
+        var_dump($categories);
+        exit;
+//        $em = $this->getDoctrine()->getManager();
 
 //        $categories = $em->getRepository('VadimTaskBundle:Category')->findAll();
 
