@@ -2,7 +2,7 @@ creator_new:
     pattern: /new
     defaults: {_controller: VadimTaskBundle:Creator:new}
 
-creator_index:
+creator:
     pattern: /
     defaults: {_controller: VadimTaskBundle:Creator:index}
 

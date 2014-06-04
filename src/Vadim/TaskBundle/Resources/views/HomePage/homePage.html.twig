@@ -1,0 +1,9 @@
+{% extends 'VadimTaskBundle::layout.html.twig' %}
+{% block body %}
+   <ul>
+       <li><a href="{{ path('category' )}}"> {{ 'Category List' }}</a></li>
+       <li><a href="{{ path('project' )}}"> {{ 'Project List' }}</a></li>
+       <li><a href="{{ path('creator' )}}"> {{ 'Creator List' }}</a></li>
+       <li><a href="{{ path('generate_tree' )}}"> {{ 'Tree' }}</a></li>
+   </ul>
+{% endblock body %}
